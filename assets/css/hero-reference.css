@@ -1,0 +1,200 @@
+/* V11: Composição fiel à imagem aprovada.
+   A foto e os detalhes tecnológicos são uma única arte visual, para que
+   os alinhamentos sejam os mesmos nos dois temas e não se desfaçam no CSS.
+   A interface, navegação, botões e formulários continuam HTML/JS reais. */
+
+/* O mockup usa ~40% da largura para a apresentação e 60% para a arte. */
+@media (min-width: 701px) {
+  .home { grid-template-columns: 40% 60%; }
+  .hero-copy {
+    min-height: 100svh;
+    padding: clamp(125px, 15vh, 143px) clamp(25px, 3vw, 56px) 38px clamp(48px, 5.6vw, 96px);
+    position: relative;
+    z-index: 5;
+    background: var(--bg);
+  }
+  .hero-copy::after {
+    content: '';
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    bottom: 0;
+    width: clamp(130px, 21vw, 340px);
+    right: calc(-1 * clamp(130px, 21vw, 340px) + 105px);
+    pointer-events: none;
+    background: linear-gradient(to right, var(--bg) 0%, color-mix(in srgb,var(--bg), transparent 10%) 17%, color-mix(in srgb,var(--bg), transparent 55%) 65%, transparent 100%);
+    filter: blur(6px);
+  }
+  .hero-copy .hero-center { padding: 28px 0 12px; }
+  .hero-center h1 { font-size: clamp(48px, 4.55vw, 78px); }
+  .hero-copy .hero-description { font-size: clamp(13px, 1.12vw, 17px); max-width: 485px; }
+  .hero-copy .hero-cta { gap: 15px; }
+  .hero-visual { min-height: 100svh; position:relative; overflow:hidden; background:#08121c; }
+  .hero-visual .portrait-block,
+  .hero-visual .portrait-block:hover {
+    position:absolute;
+    inset:88px 0 0 0;
+    height:auto;
+    width:auto;
+    z-index:0;
+    background:#071019;
+    overflow:hidden;
+    transform:none;
+    border:0;
+    box-shadow:none;
+  }
+  .hero-visual .portrait-block::before,
+  .hero-visual .portrait-block::after { display:none !important; }
+}
+
+/* Os painéis de código, progresso e detalhes já estão na arte aprovada:
+   ocultar duplicações HTML, que deslocavam a composição. */
+.hero-visual .hero-technology,
+.hero-visual .visual-top,
+.hero-visual .visual-bottom,
+.hero-visual .visual-grid,
+.hero-visual .visual-noise,
+.hero-visual .visual-orbit,
+.hero-visual .visual-watermark { display: none !important; }
+.hero-visual::before,
+.hero-visual::after { display:none !important; }
+
+.hero-visual .portrait-block .hero-art {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  display:block;
+}
+.hero-visual .portrait-block .hero-art img {
+  display:block;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:50% 50%;
+  filter:none !important;
+  transform:none !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+  transition:opacity .32s ease;
+}
+.hero-visual:hover .portrait-block .hero-art img { transform:none !important; }
+
+.hero-art--light { opacity:0; pointer-events:none; }
+.hero-art--dark { opacity:1; }
+html[data-theme='light'] .hero-art--light { opacity:1; }
+html[data-theme='light'] .hero-art--dark { opacity:0; }
+
+/* Navbar acompanha o mockup claro (claro à esquerda / grafite à direita).
+   No dark, a barra é uniformemente escura, com a mesma fotografia. */
+.site-header {
+  background: linear-gradient(90deg,#0c0d0e 0%,#0c0d0e 40%,#080e16 60%,#07111a 100%) !important;
+  border-bottom-color:rgba(255,255,255,.10);
+}
+/* V12 — LIGHT CLEAN: branco puro, sem degradê invadindo o retrato.
+   Apenas o painel de apresentação e a navbar ficam brancos; o retrato mantém
+   sua arte tecnológica escura, com divisão vertical nítida como no Helio. */
+html[data-theme='light'] .site-header {
+  background: #fff !important;
+  border-bottom-color: rgba(20,30,24,.12);
+}
+html[data-theme='light'] .hero-copy { background: #fff; }
+html[data-theme='light'] .hero-copy::after { display: none !important; }
+
+/* Mesma arte dark do retrato nos dois modos. A fotografia e a malha digital
+   permanecem intactas, sem o degradê claro embutido na arte light anterior. */
+html[data-theme='light'] .hero-art--dark { opacity: 1; }
+html[data-theme='light'] .hero-art--light { display: none; opacity: 0; }
+
+/* Contraste do menu no cabeçalho branco. */
+html[data-theme='light'] body:not(.menu-open) .theme-switch {
+  color: #172119;
+  background: transparent;
+  border-color: rgba(20,30,24,.28);
+}
+html[data-theme='light'] body:not(.menu-open) .menu-trigger { color: #172119; }
+html[data-theme='light'] body:not(.menu-open) .menu-trigger .menu-icon {
+  background: transparent;
+  border-color: #526d00;
+}
+html[data-theme='light'] body:not(.menu-open) .menu-trigger .menu-icon i { background: #526d00; }
+html[data-theme='light'] .hero-center h1 { color:#101513; }
+html[data-theme='light'] .hero-description,
+html[data-theme='light'] .hero-topline,
+html[data-theme='light'] .eyebrow,
+html[data-theme='light'] .social-line,
+html[data-theme='light'] .scroll-action { color:#39463c; }
+
+/* O menu aberto tem superfície própria e deve ter prioridade sobre a barra. */
+body.menu-open .site-header,
+html[data-theme='light'] body.menu-open .site-header { background:transparent !important; }
+
+@media (min-width:701px) and (max-width:1250px) {
+  .hero-copy { padding-left:clamp(28px,4.6vw,62px);padding-right:24px; }
+  .hero-copy .hero-center h1 {font-size:clamp(40px,4.5vw,60px);}
+  .hero-copy .hero-description {font-size:13px;line-height:1.75;}
+  .hero-copy .hero-cta .button { padding:0 16px; font-size:11px; }
+}
+
+/* Mobile: a mesma foto, com um recorte próprio tirado da arte aprovada.
+   A apresentação permanece legível e o menu continua funcionando. */
+@media(max-width:700px) {
+  .home { display:flex; flex-direction:column; }
+  .hero-copy { order:1; min-height:0; padding:110px 25px 31px; z-index:2; }
+  .hero-copy::after { display:none !important; }
+  .hero-visual { order:2; width:100%; min-height:380px; height:58svh; max-height:660px; margin:0; background:#08121c; }
+  .hero-visual .portrait-block,
+  .hero-visual .portrait-block:hover {position:absolute;inset:0;height:100%;width:100%;border-radius:0;transform:none;background:#08121c;overflow:hidden;}
+  .hero-visual .portrait-block::before,
+  .hero-visual .portrait-block::after {display:none !important;}
+  .hero-visual .portrait-block .hero-art img {object-position:50% 50%;}
+  .site-header { background:#0c0d0e !important; }
+  html[data-theme='light'] .site-header { background:#fff !important; }
+  html[data-theme='light'] .theme-switch { color:#1b221a;border-color:rgba(0,0,0,.28); }
+  html[data-theme='light'] .menu-trigger { color:#141c17; }
+  html[data-theme='light'] .menu-trigger .menu-icon {border-color:#526d00;background:transparent;}
+  html[data-theme='light'] .menu-trigger .menu-icon i {background:#526d00;}
+  html[data-theme='light'] .hero-copy { background:#fff; }
+}
+@media(max-width:470px){
+  .hero-copy {padding:101px 22px 28px;}
+  .hero-visual {height:53svh;min-height:350px;max-height:540px;}
+}
+
+/* GitHub — assinatura discreta e acessível na home e no menu imersivo. */
+.hero-github-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line-strong);
+  transition: color .2s ease, border-color .2s ease;
+}
+.hero-github-link span {color:var(--accent);font-size:15px;line-height:1}
+.hero-github-link:hover,
+.hero-github-link:focus-visible {color:var(--accent);border-color:var(--accent)}
+.menu-github-link {
+  margin-left: clamp(12px, 3vw, 40px);
+  color: var(--accent);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  white-space: nowrap;
+}
+.menu-github-link:hover { color: var(--ink); }
+@media (max-width: 700px) {
+  .hero-github-link {font-size:10px}
+  .menu-end {flex-wrap:wrap;gap:14px}
+  .menu-github-link {display:inline-block;margin-left:0}
+}

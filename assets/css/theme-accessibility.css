@@ -1,0 +1,22 @@
+/* Dois papéis diferentes para o verde: texto com contraste e preenchimento vivo. */
+:root{--accent-fill:#ccfa39;--accent-fill-ink:#12170a}
+html[data-theme='light']{
+  --bg:#ffffff;--bg-deep:#f5f6f3;--panel:#ffffff;--panel-light:#f6f7f5;
+  --ink:#141b16;--muted:#435047;--muted-low:#606d62;
+  --accent:#526d00;--accent-dim:#496500;
+  --accent-fill:#c6f33f;--accent-fill-ink:#151a0d;
+  --line:rgba(24,39,22,.14);--line-strong:rgba(24,39,22,.28);
+}
+.button-lime{background:var(--accent-fill);border-color:var(--accent-fill);color:var(--accent-fill-ink)}
+.button-lime:hover{background:#dfff72;border-color:#dfff72;color:#111}
+.filter.is-active,.filter:hover{background:var(--accent-fill);border-color:var(--accent-fill);color:var(--accent-fill-ink)}
+html[data-theme='light'] .button-outline:hover{color:var(--accent);border-color:var(--accent)}
+html[data-theme='light'] .rotating-words{color:var(--accent)}
+html[data-theme='light'] .panel-intro h2 em{color:var(--accent)}
+html[data-theme='light'] .status-dot{box-shadow:0 0 10px rgba(69,104,0,.34)}
+html[data-theme='light'] .hero-visual .status-dot{background:#ccfa39;box-shadow:0 0 12px rgba(204,250,57,.8)}
+html[data-theme='light'] .hero-visual .visual-top,html[data-theme='light'] .hero-visual .visual-bottom{color:#f6f8f2}
+html[data-theme='light'] .hero-visual .visual-bottom b{color:#ccfa39}
+html[data-theme='light'] .close-button span{color:var(--accent)}
+html[data-theme='light'] .project-card-tag,html[data-theme='light'] .project-card-title b{color:var(--accent)}
+html[data-theme='light'] .toast{background:var(--accent-fill);color:#171c10}

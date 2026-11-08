@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 60" role="img" aria-label="Monograma a/f">
+  <path d="M13 21 2 30l11 9M113 21l11 9-11 9" fill="none" stroke="#526d00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="25" y="44" fill="#172017" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="700" font-style="italic" letter-spacing="-4">a</text>
+  <path d="M75 8 56 53" stroke="#526d00" stroke-width="7" stroke-linecap="square"/>
+  <text x="81" y="44" fill="#172017" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="700" font-style="italic">f</text>
+</svg>
