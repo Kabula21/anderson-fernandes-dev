@@ -14,10 +14,7 @@ export function initForms() {
   const note = form.querySelector('.form-footnote');
 
   const items = [];
-  if (whatsapp) {
-    items.push(`<a href="https://wa.me/${whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Conversar com Anderson no WhatsApp">WHATSAPP <span>↗</span></a>`);
-    items.push('<p class="contact-phone">(79) 99996-8293</p>');
-  }
+  
   if (contact.email) items.push(`<a href="mailto:${encodeURIComponent(contact.email)}">E-MAIL <span>↗</span></a>`);
   for (const key of ['github','linkedin','instagram']) {
     const url = contact[key];
