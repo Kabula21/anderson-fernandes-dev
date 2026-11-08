@@ -1,75 +1,58 @@
-# Anderson Fernandes — Helio Inspired V12
+# 💻 Anderson Fernandes | Portfólio Web & Software
 
-Portfólio pessoal de Anderson Fernandes, com navegação em painéis inspirada na experiência visual do Helio. HTML, CSS e JavaScript nativos e separados por responsabilidade. O projeto não depende de arquivos proprietários do template Helio.
+Bem-vindo ao repositório do meu portfólio profissional!
 
-## Atualização V12 — fundo branco e GitHub
+Este projeto foi desenvolvido para apresentar meus trabalhos, habilidades e serviços como **Desenvolvedor Web & Software**, com foco na criação de sites, sistemas personalizados e soluções digitais para pessoas, empresas e negócios.
 
-- **Tema claro:** fundo branco sólido, inclusive na navbar; removido o degradê branco que invadia a fotografia. A imagem dark permanece no painel direito, com divisão clara entre as áreas.
-- **Tema escuro:** preservado, com a mesma fotografia e efeitos.
-- **GitHub:** link para `https://github.com/Kabula21` na tela inicial, no menu expandido e na seção Contato (configuração em `assets/js/config.js`).
-- Mantidas a experiência Helio em painéis, as imagens de portfólio, a navegação e o formulário de WhatsApp.
+A landing page possui uma identidade visual moderna e tecnológica, inspirada na experiência do template **Helio**, com navegação interativa, animações, design responsivo e uma interface personalizada.
 
-## Composição visual
+## 🚀 Tecnologias Utilizadas
 
-A home mantém os **dois painéis Helio**. No modo claro, o fundo da apresentação e a barra superior são `#ffffff` sólido; não há degradê branco sobre o painel fotográfico. No tema escuro, a apresentação permanece grafite. A arte tecnológica do retrato é idêntica nos dois temas.
+- **HTML5** — Estrutura semântica e organização do conteúdo.
+- **CSS3** — Estilização, animações, transições, temas e responsividade.
+- **JavaScript (ES6+)** — Interatividade e funcionalidades dinâmicas.
+- **JavaScript Modules** — Organização modular do código e separação de responsabilidades.
+- **SVG** — Elementos gráficos, ícones e identidade visual.
 
-No celular, o conteúdo aparece primeiro e o painel fotográfico logo abaixo. Links do GitHub aparecem na home, no menu expandido e no contato.
+## 📌 Funcionalidades
 
-## Estrutura principal
+✔️ Landing page moderna com identidade visual personalizada  
+✔️ Interface inspirada no estilo e nas transições do Helio  
+✔️ Navegação dinâmica entre as seções Início, Sobre, Projetos e Contato  
+✔️ Menu interativo com animações e transições suaves  
+✔️ Alternância entre os temas Light e Dark  
+✔️ Apresentação pessoal com fotografia e efeitos tecnológicos  
+✔️ Textos animados destacando especialidades profissionais  
+✔️ Portfólio interativo com filtros e detalhes dos projetos  
+✔️ Formulário de contato integrado ao WhatsApp  
+✔️ Geração automática de mensagem com os dados preenchidos pelo visitante  
+✔️ Integração com GitHub e redes profissionais  
+✔️ Design responsivo para desktop, tablet e dispositivos móveis  
+✔️ Código organizado e modularizado para facilitar manutenção e evolução
 
-```
-anderson-fernandes-helio-v12/
-├── index.html
-├── README.md
-└── assets/
-    ├── css/
-    │   ├── tokens.css
-    │   ├── base.css
-    │   ├── components.css
-    │   ├── layout.css
-    │   ├── panels.css
-    │   ├── responsive.css
-    │   ├── navigation.css
-    │   ├── hero-image.css
-    │   ├── theme-accessibility.css
-    │   ├── project-images.css
-    │   ├── hero-tech.css
-    │   └── hero-reference.css   # composição Helio e ajustes dos temas
-    ├── img/
-    │   ├── hero-reference-dark.webp
-    │   ├── hero-reference-mobile-dark.webp
-    │   ├── af-monogram.svg / af-monogram-light.svg / favicon.svg
-    │   └── projects/            # quatro artes conceituais distintas
-    └── js/
-        ├── config.js
-        ├── data/projects.js
-        ├── main.js
-        └── modules/             # menu, navegação, tema, formulário, etc.
-```
+## 📱 Contato via WhatsApp
 
-## Executar
+O formulário permite que o visitante informe seu nome, e-mail, tipo de projeto e descreva sua necessidade.
 
-Abra a pasta pelo Live Server do VS Code ou execute dentro da pasta:
+Ao enviar, o sistema abre uma conversa no WhatsApp com uma **mensagem personalizada e preenchida automaticamente**, permitindo que o visitante confirme o envio e inicie o contato diretamente comigo.
 
-```bash
-python -m http.server 8000
-```
+## 📂 Estrutura do Projeto
 
-Acesse `http://localhost:8000`. Módulos JavaScript não devem ser testados abrindo o HTML diretamente por `file://`.
+O projeto utiliza uma arquitetura simples e modular, com separação entre HTML, estilos, scripts e recursos visuais.
 
-## Contato
+- `index.html` — Página principal
+- `assets/css/` — Estilos, componentes, temas e responsividade
+- `assets/js/` — Scripts, configurações e módulos de interação
+- `assets/img/` — Fotografias, identidade visual e imagens dos projetos
 
-O WhatsApp está configurado como **(79) 99996-8293** em `assets/js/config.js` (`5579999968293`). O formulário recolhe nome, e-mail, tipo de projeto e descrição, e abre a conversa com o texto pré-preenchido. **O visitante confirma o envio dentro do WhatsApp**. Não há backend nem envio automático de mensagens.
+## 🎯 Objetivo
 
-## Projetos e personalização
+Criar uma experiência digital que vá além de um portfólio tradicional, unindo **design, tecnologia, criatividade e usabilidade** para apresentar meu trabalho e facilitar a conexão com pessoas e empresas que buscam soluções digitais sob medida.
 
-As quatro imagens do portfólio são **referências conceituais**, não trabalhos reais. Ajuste os itens em `assets/js/data/projects.js` quando tiver imagens dos seus projetos. Informações e links pessoais adicionais ficam em `assets/js/config.js`.
+---
 
-Para ajustes futuros no enquadramento da arte da home, prefira alterar os arquivos `hero-reference-*.webp` e o arquivo `assets/css/hero-reference.css`, em vez de ampliar a fotografia com `transform: scale()`.
+**👨‍💻 Desenvolvido por Anderson Fernandes**
 
-## Verificações
+🔗 [GitHub — @Kabula21](https://github.com/Kabula21)
 
-- Sintaxe verificada nos 10 módulos JavaScript com `node --check`;
-- Todos os caminhos de imagens e recursos do HTML verificados;
-- Arte renderizada em navegador isolado em desktop e mobile, temas claro e escuro, com prévias estáticas;
-- Teste completo de navegação em um servidor HTTP local não concluído neste ambiente, porque o navegador bloqueia acesso à porta local. Recomenda-se testar menu, painéis e WhatsApp em um navegador normal antes da publicação.
+*Transformando ideias em soluções digitais.*
