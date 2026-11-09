@@ -21,7 +21,7 @@ A landing page possui uma identidade visual moderna e tecnológica, inspirada na
 ✔️ Navegação dinâmica entre as seções Início, Sobre, Projetos e Contato  
 ✔️ Menu interativo com animações e transições suaves  
 ✔️ Alternância entre os temas Light e Dark  
-✔️ Apresentação pessoal com fotografia e efeitos tecnológicos  
+✔️ Apresentação pessoal com fotografia e efeitos tecnológicos animados no PC e celular  
 ✔️ Textos animados destacando especialidades profissionais  
 ✔️ Portfólio interativo com filtros e detalhes dos projetos  
 ✔️ Formulário de contato integrado ao WhatsApp  
@@ -29,6 +29,20 @@ A landing page possui uma identidade visual moderna e tecnológica, inspirada na
 ✔️ Integração com GitHub e redes profissionais  
 ✔️ Design responsivo para desktop, tablet e dispositivos móveis  
 ✔️ Código organizado e modularizado para facilitar manutenção e evolução
+
+## ✨ Efeitos tecnológicos animados (desktop e mobile)
+
+O retrato tem **duas camadas SVG responsivas**, uma alinhada à imagem desktop (`1004 × 851`) e outra à imagem mobile (`685 × 685`). Os efeitos são desenhados *sobre* as imagens originais sem alterá-las:
+
+- Pulsos verde-lima e ciano que percorrem os circuitos da foto.
+- Pontos de conexão com brilho pulsante e pequenas partículas digitais.
+- Brilho percorrendo a barra de progresso no desktop.
+- Animações automáticas também no celular, sem depender do mouse.
+- Respeito à configuração de acessibilidade **Reduzir movimento** (`prefers-reduced-motion`).
+
+**Arquivos atualizados:** `index.html` e o novo `assets/css/hero-motion.css`. Não há dependências extras.
+
+**Como testar:** execute o site com a extensão Live Server do VS Code, ou rode `python -m http.server 8000` dentro da pasta do projeto e abra `http://localhost:8000` no PC. No celular, abra a mesma página publicada ou use o IP do computador na mesma rede. As animações do retrato usam só HTML/CSS/SVG e também aparecem ao abrir o `index.html` diretamente, mas a navegação JavaScript do site requer um servidor local em alguns navegadores.
 
 ## 📱 Contato via WhatsApp
 

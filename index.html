@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/project-images.css">
   <link rel="stylesheet" href="assets/css/hero-tech.css">
   <link rel="stylesheet" href="assets/css/hero-reference.css">
+  <link rel="stylesheet" href="assets/css/hero-motion.css">
   <script src="assets/js/main.js" type="module"></script>
 </head>
 <body>
@@ -64,6 +65,94 @@
             <source media="(max-width: 700px)" srcset="assets/img/hero-reference-mobile-dark.webp" type="image/webp">
             <img data-photo-preview src="assets/img/hero-reference-dark.webp" alt="Retrato de Anderson Fernandes com contornos tecnológicos verde-lima, malha digital azul e iluminação magenta" fetchpriority="high" decoding="async">
           </picture>
+          <!-- Animações de circuitos sobre a arte. Dois mapas SVG separados
+               preservam o alinhamento exato da foto no desktop e no mobile. -->
+          <svg class="hero-motion hero-motion--desktop" viewBox="0 0 1004 851" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="hm-desktop-halo"><stop offset="0" stop-color="#4de9fb" stop-opacity=".26"/><stop offset="1" stop-color="#4de9fb" stop-opacity="0"/></radialGradient>
+              <radialGradient id="hm-desktop-lime"><stop offset="0" stop-color="#c8ff24" stop-opacity=".24"/><stop offset="1" stop-color="#c8ff24" stop-opacity="0"/></radialGradient>
+            </defs>
+            <ellipse class="hm-halo hm-halo--blue" cx="588" cy="354" rx="154" ry="205" fill="url(#hm-desktop-halo)"/>
+            <ellipse class="hm-halo hm-halo--lime" cx="285" cy="448" rx="135" ry="158" fill="url(#hm-desktop-lime)"/>
+            <g class="hm-circuit hm-circuit--lime">
+              <path class="hm-base" d="M680 147 H638 L593 202 H554" />
+              <path class="hm-photon" pathLength="100" d="M680 147 H638 L593 202 H554" />
+              <path class="hm-base" d="M49 650 L104 594 L158 559 L240 534 L288 499" />
+              <path class="hm-photon hm-photon--slow" pathLength="100" d="M49 650 L104 594 L158 559 L240 534 L288 499" />
+              <path class="hm-base" d="M351 744 L455 716 L548 683 L615 692" />
+              <path class="hm-photon hm-photon--medium" pathLength="100" d="M351 744 L455 716 L548 683 L615 692" />
+              <path class="hm-base" d="M298 158 Q319 97 361 81 Q403 61 452 83" />
+              <path class="hm-photon hm-photon--slow" pathLength="100" d="M298 158 Q319 97 361 81 Q403 61 452 83" />
+            </g>
+            <g class="hm-circuit hm-circuit--cyan">
+              <path class="hm-base" d="M451 76 Q525 86 551 155 L557 257 Q575 324 566 384 L543 455" />
+              <path class="hm-photon hm-photon--medium" pathLength="100" d="M451 76 Q525 86 551 155 L557 257 Q575 324 566 384 L543 455" />
+              <path class="hm-base" d="M549 478 L601 530 L696 594 L754 642" />
+              <path class="hm-photon" pathLength="100" d="M549 478 L601 530 L696 594 L754 642" />
+              <path class="hm-base" d="M502 569 L559 581 L616 568 L695 622" />
+              <path class="hm-photon hm-photon--slow" pathLength="100" d="M502 569 L559 581 L616 568 L695 622" />
+              <path class="hm-base" d="M465 709 L549 682 L628 711" />
+              <path class="hm-photon hm-photon--medium" pathLength="100" d="M465 709 L549 682 L628 711" />
+            </g>
+            <!-- A faixa luminosa percorre a barra de progresso que já está na foto. -->
+            <path class="hm-progress" pathLength="100" d="M693 332 H906" />
+            <g class="hm-sparks">
+              <circle class="hm-node hm-node--lime" cx="593" cy="202" r="5" style="--delay:-.4s"/>
+              <circle class="hm-node hm-node--lime" cx="638" cy="147" r="2.3" style="--delay:-1.8s"/>
+              <circle class="hm-node hm-node--cyan" cx="551" cy="155" r="2.8" style="--delay:-2.5s"/>
+              <circle class="hm-node hm-node--cyan" cx="560" cy="581" r="2.7" style="--delay:-3.1s"/>
+              <circle class="hm-node hm-node--cyan" cx="695" cy="622" r="2.4" style="--delay:-.8s"/>
+              <circle class="hm-node hm-node--lime" cx="548" cy="683" r="2.6" style="--delay:-4.5s"/>
+              <circle class="hm-particle hm-particle--lime" cx="593" cy="241" r="1.6" style="--delay:-2s;--duration:4.4s;--travel:-12px"/>
+              <circle class="hm-particle" cx="622" cy="288" r="1.7" style="--delay:-1s;--duration:5s;--travel:15px"/>
+              <circle class="hm-particle" cx="647" cy="350" r="1.8" style="--delay:-3.1s;--duration:4.7s;--travel:-13px"/>
+              <circle class="hm-particle" cx="578" cy="429" r="1.5" style="--delay:-4s;--duration:5.4s;--travel:13px"/>
+              <circle class="hm-particle" cx="686" cy="456" r="1.4" style="--delay:-1.8s;--duration:4.1s;--travel:-9px"/>
+              <circle class="hm-particle hm-particle--lime" cx="272" cy="447" r="1.9" style="--delay:-3s;--duration:5.5s;--travel:-13px"/>
+              <circle class="hm-particle hm-particle--lime" cx="262" cy="386" r="1.2" style="--delay:-.5s;--duration:4.9s;--travel:12px"/>
+              <circle class="hm-particle" cx="627" cy="506" r="1.4" style="--delay:-1.2s;--duration:5.1s;--travel:-15px"/>
+            </g>
+          </svg>
+          <svg class="hero-motion hero-motion--mobile" viewBox="0 0 685 685" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="hm-mobile-halo"><stop offset="0" stop-color="#37e5ff" stop-opacity=".21"/><stop offset="1" stop-color="#37e5ff" stop-opacity="0"/></radialGradient>
+              <radialGradient id="hm-mobile-lime"><stop offset="0" stop-color="#c8ff24" stop-opacity=".16"/><stop offset="1" stop-color="#c8ff24" stop-opacity="0"/></radialGradient>
+            </defs>
+            <ellipse class="hm-halo hm-halo--blue" cx="500" cy="298" rx="122" ry="186" fill="url(#hm-mobile-halo)"/>
+            <ellipse class="hm-halo hm-halo--lime" cx="198" cy="331" rx="118" ry="205" fill="url(#hm-mobile-lime)"/>
+            <g class="hm-circuit hm-circuit--lime">
+              <path class="hm-base" d="M574 114 L541 147 H490" />
+              <path class="hm-photon" pathLength="100" d="M574 114 L541 147 H490" />
+              <path class="hm-base" d="M3 552 L83 505 L167 470 L235 432" />
+              <path class="hm-photon hm-photon--medium" pathLength="100" d="M3 552 L83 505 L167 470 L235 432" />
+              <path class="hm-base" d="M124 686 L281 668 L415 652 L504 622 L635 556" />
+              <path class="hm-photon hm-photon--slow" pathLength="100" d="M124 686 L281 668 L415 652 L504 622 L635 556" />
+              <path class="hm-base" d="M219 170 Q244 55 313 36 Q375 14 435 62" />
+              <path class="hm-photon hm-photon--slow" pathLength="100" d="M219 170 Q244 55 313 36 Q375 14 435 62" />
+            </g>
+            <g class="hm-circuit hm-circuit--cyan">
+              <path class="hm-base" d="M421 68 Q487 106 497 187 L495 290 Q502 366 469 421" />
+              <path class="hm-photon hm-photon--medium" pathLength="100" d="M421 68 Q487 106 497 187 L495 290 Q502 366 469 421" />
+              <path class="hm-base" d="M469 429 L528 457 L614 503 L685 558" />
+              <path class="hm-photon" pathLength="100" d="M469 429 L528 457 L614 503 L685 558" />
+              <path class="hm-base" d="M417 651 L499 619 L574 622 L633 557" />
+              <path class="hm-photon hm-photon--slow" pathLength="100" d="M417 651 L499 619 L574 622 L633 557" />
+            </g>
+            <ellipse class="hm-orbit" cx="343" cy="331" rx="292" ry="305" pathLength="100"/>
+            <g class="hm-sparks">
+              <circle class="hm-node hm-node--lime" cx="541" cy="147" r="4.2" style="--delay:-1s"/>
+              <circle class="hm-node hm-node--lime" cx="417" cy="652" r="4" style="--delay:-2.5s"/>
+              <circle class="hm-node hm-node--lime" cx="635" cy="556" r="3" style="--delay:-4s"/>
+              <circle class="hm-node hm-node--cyan" cx="498" cy="187" r="2.6" style="--delay:-3s"/>
+              <circle class="hm-node hm-node--cyan" cx="528" cy="457" r="2.2" style="--delay:-.4s"/>
+              <circle class="hm-particle" cx="545" cy="200" r="1.6" style="--delay:-1.4s;--duration:4.5s;--travel:-12px"/>
+              <circle class="hm-particle" cx="539" cy="281" r="1.5" style="--delay:-3s;--duration:5.2s;--travel:14px"/>
+              <circle class="hm-particle" cx="548" cy="364" r="1.8" style="--delay:-.8s;--duration:4.9s;--travel:-9px"/>
+              <circle class="hm-particle hm-particle--lime" cx="197" cy="277" r="1.7" style="--delay:-1.6s;--duration:4.7s;--travel:10px"/>
+              <circle class="hm-particle hm-particle--lime" cx="185" cy="334" r="1.5" style="--delay:-3.7s;--duration:5.4s;--travel:-12px"/>
+              <circle class="hm-particle" cx="562" cy="418" r="1.4" style="--delay:-2.5s;--duration:5.1s;--travel:12px"/>
+            </g>
+          </svg>
         </div>
         <div class="hero-technology" aria-hidden="true">
           <div class="tech-kicker"><span>IDENTIDADE</span><span>+ DESIGN</span><span>+ CÓDIGO</span><span>+ SOLUÇÃO</span></div>
