@@ -7,7 +7,13 @@
   <meta name="description" content="Anderson Fernandes — desenvolvedor de sites, sistemas e experiências digitais sob medida para pessoas e negócios.">
   <title>Anderson Fernandes — Sites, Sistemas e Soluções Digitais</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="assets/img/hero-reference-dark.webp" fetchpriority="high">
+  <!-- Fontes originalmente definidas pelo design, agora carregadas de fato. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Escolha da arte adequada à largura e à densidade da tela. -->
+  <link rel="preload" as="image" href="assets/img/hero-reference-dark-clear.webp" imagesrcset="assets/img/hero-reference-dark-clear.webp 1x, assets/img/hero-reference-dark-clear@2x.webp 2x" media="(min-width: 701px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-reference-mobile-dark-clear.webp" imagesrcset="assets/img/hero-reference-mobile-dark-clear.webp 1x, assets/img/hero-reference-mobile-dark-clear@2x.webp 2x" media="(max-width: 700px)" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -21,6 +27,8 @@
   <link rel="stylesheet" href="assets/css/hero-tech.css">
   <link rel="stylesheet" href="assets/css/hero-reference.css">
   <link rel="stylesheet" href="assets/css/hero-motion.css">
+  <link rel="stylesheet" href="assets/css/about-portfolio.css">
+  <link rel="stylesheet" href="assets/css/quality.css">
   <script src="assets/js/main.js" type="module"></script>
 </head>
 <body>
@@ -62,8 +70,8 @@
         <div class="visual-top"><span class="status-dot"></span> DISPONÍVEL PARA NOVOS PROJETOS</div>
         <div class="portrait-block" data-photo-surface>
           <picture class="hero-art hero-art--dark">
-            <source media="(max-width: 700px)" srcset="assets/img/hero-reference-mobile-dark.webp" type="image/webp">
-            <img data-photo-preview src="assets/img/hero-reference-dark.webp" alt="Retrato de Anderson Fernandes com contornos tecnológicos verde-lima, malha digital azul e iluminação magenta" fetchpriority="high" decoding="async">
+            <source media="(max-width: 700px)" srcset="assets/img/hero-reference-mobile-dark-clear.webp 1x, assets/img/hero-reference-mobile-dark-clear@2x.webp 2x" type="image/webp">
+            <img data-photo-preview src="assets/img/hero-reference-dark-clear.webp" srcset="assets/img/hero-reference-dark-clear.webp 1x, assets/img/hero-reference-dark-clear@2x.webp 2x" width="1004" height="851" alt="Retrato de Anderson Fernandes com contornos tecnológicos verde-lima, malha digital azul e iluminação magenta" fetchpriority="high" decoding="async">
           </picture>
           <!-- Animações de circuitos sobre a arte. Dois mapas SVG separados
                preservam o alinhamento exato da foto no desktop e no mobile. -->
@@ -171,29 +179,53 @@
     <div class="content-panel" data-panel role="dialog" aria-modal="true" aria-label="Conteúdo da página" tabindex="-1" hidden>
       <div class="panel-topbar"><span class="panel-label">ANDERSON FERNANDES <span class="lime">/</span> <span data-panel-name>SOBRE</span></span><button class="close-button" type="button" data-close-panel aria-label="Voltar ao início">VOLTAR <span aria-hidden="true">↗</span></button></div>
       <div class="panel-scroll" data-panel-scroll>
-        <section class="panel-section" data-section="sobre" aria-labelledby="about-title" hidden>
-          <div class="panel-intro"><p class="kicker"><span class="kicker-num">01 /</span> QUEM SOU</p><h2 id="about-title">Tecnologia com<br><em>propósito<span class="period">.</span></em></h2><p class="intro-lead">Acredito que boas soluções começam com uma conversa, não com uma linha de código.</p></div>
-          <div class="about-grid">
-            <div class="about-visual"><span class="about-initials" aria-hidden="true">a/f</span><div class="about-caption">ANDERSON FERNANDES<span>DEVELOPER / CREATOR</span></div></div>
-            <div class="about-text"><p>Sou <strong>Anderson Fernandes</strong>, desenvolvedor focado em criar experiências digitais, sites e sistemas que resolvem problemas de verdade.</p><p>Trabalho com soluções pensadas para cada necessidade — do primeiro site de um profissional à ferramenta que ajuda uma empresa a organizar seu dia a dia.</p><a href="#contato" data-route="contato" class="inline-link">Vamos tirar sua ideia do papel <span aria-hidden="true">↗</span></a></div>
+        <section class="panel-section about-section" data-section="sobre" aria-labelledby="about-title" hidden>
+          <div class="panel-intro about-intro">
+            <p class="kicker"><span class="kicker-num">01 /</span> QUEM SOU</p>
+            <h2 id="about-title">Não começo pelo código.<br><em>Começo pelo problema<span class="period">.</span></em></h2>
+            <p class="intro-lead">Antes de pensar na ferramenta, procuro entender as pessoas, o contexto e o que realmente precisa funcionar.</p>
           </div>
-          <div class="section-subheading"><span>O QUE POSSO CRIAR</span><span>02 — 05</span></div>
-          <div class="service-list">
-            <div class="service-item"><span>01</span><div><h3>Sites profissionais</h3><p>Presença digital marcante, responsiva e rápida.</p></div></div>
-            <div class="service-item"><span>02</span><div><h3>Landing pages</h3><p>Páginas estratégicas criadas para apresentar e converter.</p></div></div>
-            <div class="service-item"><span>03</span><div><h3>Sistemas sob medida</h3><p>Aplicações, painéis e fluxos adaptados à sua operação.</p></div></div>
-            <div class="service-item"><span>04</span><div><h3>Integrações e automações</h3><p>Conexões entre ferramentas e processos mais inteligentes.</p></div></div>
+          <div class="about-grid about-grid--refined">
+            <div class="about-visual about-process" aria-label="Meu processo de trabalho: entender, desenhar e construir">
+              <div class="process-topline"><span class="process-status-dot" aria-hidden="true"></span><span>COMO EU TRABALHO</span><span>AF / 01</span></div>
+              <div class="process-graphic" aria-hidden="true"><span class="process-orbit process-orbit--one"></span><span class="process-orbit process-orbit--two"></span><span class="process-cross">+</span></div>
+              <ol class="process-steps">
+                <li><span class="process-index">01</span><div><strong>Entender</strong><small>Ouvir, investigar e definir o objetivo.</small></div></li>
+                <li><span class="process-index">02</span><div><strong>Desenhar</strong><small>Organizar ideias e criar o caminho.</small></div></li>
+                <li><span class="process-index">03</span><div><strong>Construir</strong><small>Transformar a proposta em experiência.</small></div></li>
+              </ol>
+              <div class="process-footer"><span>ESTRATÉGIA <i>→</i> INTERFACE <i>→</i> CÓDIGO</span><span aria-hidden="true">↗</span></div>
+            </div>
+            <div class="about-text about-text--refined">
+              <p class="about-eyebrow">DESENVOLVEDOR / CRIADOR DE SOLUÇÕES</p>
+              <h3>Construir bem começa por perguntar melhor.</h3>
+              <p>Sou <strong>Anderson Fernandes</strong>. Crio sites, interfaces e sistemas para transformar necessidades em experiências digitais claras e úteis.</p>
+              <p>Gosto de unir raciocínio, estética e desenvolvimento. Cada projeto pede uma solução diferente — e é justamente isso que torna o processo interessante.</p>
+              <div class="about-belief"><span aria-hidden="true">✳</span><p>Menos complexidade sem propósito. Mais atenção ao que faz diferença para quem usa.</p></div>
+              <a href="#contato" data-route="contato" class="inline-link">Vamos conversar sobre sua ideia <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-          <div class="skill-strip" aria-label="Áreas de atuação"><span>WEB APPS</span><span>INTERFACES</span><span>APIs</span><span>UI / UX</span><span>AUTOMAÇÕES</span></div>
-          <button class="panel-next" type="button" data-route="projetos">Próximo: meus projetos <span>↗</span></button>
+          <div class="section-subheading"><span>ONDE EU POSSO AJUDAR</span><span>01 — 04</span></div>
+          <div class="service-list service-list--refined">
+            <div class="service-item"><span>01</span><div><h3>Sites profissionais</h3><p>Sites institucionais que apresentam sua marca com clareza, confiança e uma boa experiência em qualquer tela.</p><small>FOCO / IDENTIDADE E PRESENÇA DIGITAL</small></div><span class="service-arrow" aria-hidden="true">↗</span></div>
+            <div class="service-item"><span>02</span><div><h3>Landing pages</h3><p>Páginas com mensagem direta, hierarquia visual e caminhos simples para o visitante entrar em contato ou agir.</p><small>FOCO / COMUNICAÇÃO E CONVERSÃO</small></div><span class="service-arrow" aria-hidden="true">↗</span></div>
+            <div class="service-item"><span>03</span><div><h3>Sistemas sob medida</h3><p>Interfaces para organizar informações, acompanhar atividades e apoiar rotinas que não cabem em uma solução genérica.</p><small>FOCO / ORGANIZAÇÃO E USABILIDADE</small></div><span class="service-arrow" aria-hidden="true">↗</span></div>
+            <div class="service-item"><span>04</span><div><h3>Integrações e automações</h3><p>Conexões e fluxos pensados para diminuir tarefas repetitivas e tornar os processos mais simples de acompanhar.</p><small>FOCO / FLUXOS E EFICIÊNCIA</small></div><span class="service-arrow" aria-hidden="true">↗</span></div>
+          </div>
+          <div class="about-capabilities"><p>ÁREAS QUE SE CONECTAM</p><div class="skill-strip" aria-label="Áreas de atuação"><span>DESENVOLVIMENTO WEB</span><span>INTERFACES</span><span>UI / UX</span><span>APLICAÇÕES</span><span>AUTOMAÇÕES</span></div></div>
+          <button class="panel-next" type="button" data-route="projetos">Próximo: explorar projetos <span>↗</span></button>
         </section>
 
-        <section class="panel-section" data-section="projetos" aria-labelledby="projects-title" hidden>
-          <div class="panel-intro"><p class="kicker"><span class="kicker-num">02 /</span> PORTFÓLIO</p><h2 id="projects-title">Projetos &<br><em>possibilidades<span class="period">.</span></em></h2><p class="intro-lead">O formato de cada projeto muda. O compromisso em resolver o problema, não.</p></div>
-          <p class="demo-notice">Prévia de apresentação: os projetos abaixo são exemplos visuais, não trabalhos reais publicados.</p>
-          <div class="project-filters" role="group" aria-label="Filtrar projetos"><button class="filter is-active" type="button" data-filter="todos" aria-pressed="true">Todos <span>04</span></button><button class="filter" type="button" data-filter="site" aria-pressed="false">Sites</button><button class="filter" type="button" data-filter="sistema" aria-pressed="false">Sistemas</button><button class="filter" type="button" data-filter="landing" aria-pressed="false">Landing pages</button></div>
-          <div class="project-grid" data-project-grid></div>
-          <div class="panel-callout"><p>Tem uma ideia que ainda não existe?</p><h3>Vamos construir <em>juntos.</em></h3><a class="button button-lime" href="#contato" data-route="contato">Falar sobre meu projeto ↗</a></div>
+        <section class="panel-section projects-section" data-section="projetos" aria-labelledby="projects-title" hidden>
+          <div class="panel-intro projects-intro">
+            <p class="kicker"><span class="kicker-num">02 /</span> PORTFÓLIO</p>
+            <h2 id="projects-title">Projetos &amp;<br><em>possibilidades<span class="period">.</span></em></h2>
+            <p class="intro-lead">Quatro direções diferentes. O mesmo ponto de partida: pensar a experiência antes de desenhar a interface.</p>
+          </div>
+          <div class="concept-notice"><span class="concept-mark" aria-hidden="true">✳</span><div><strong>Explorações conceituais</strong><p>Estudos visuais criados para demonstrar ideias e abordagens. Não são trabalhos de clientes nem projetos publicados.</p></div></div>
+          <div class="project-controls"><div class="project-filters" role="group" aria-label="Filtrar projetos"><button class="filter is-active" type="button" data-filter="todos" aria-pressed="true">Todos <span>04</span></button><button class="filter" type="button" data-filter="site" aria-pressed="false">Sites</button><button class="filter" type="button" data-filter="sistema" aria-pressed="false">Sistemas</button><button class="filter" type="button" data-filter="landing" aria-pressed="false">Landing pages</button></div><p class="projects-guidance">SELECIONE UM PROJETO PARA EXPLORAR <span aria-hidden="true">↗</span></p></div>
+          <div class="project-grid project-grid--editorial" data-project-grid aria-live="polite"></div>
+          <div class="panel-callout"><p>Tem um desafio que ainda não tem solução?</p><h3>Vamos pensar e construir <em>juntos.</em></h3><a class="button button-lime" href="#contato" data-route="contato">Conversar sobre minha ideia ↗</a></div>
           <button class="panel-next" type="button" data-route="contato">Próximo: vamos conversar <span>↗</span></button>
         </section>
 
@@ -211,7 +243,7 @@
     <div class="fullscreen-menu" id="fullscreen-menu" data-fullscreen-menu role="dialog" aria-modal="true" aria-label="Menu de navegação" hidden>
       <div class="menu-surface"><div class="menu-heading">EXPLORE <span class="lime">/</span> ANDERSON FERNANDES</div><nav class="menu-links" aria-label="Menu expandido"><a href="#inicio" data-route="inicio"><span>01</span>Início <b>↗</b></a><a href="#sobre" data-route="sobre"><span>02</span>Sobre mim <b>↗</b></a><a href="#projetos" data-route="projetos"><span>03</span>Projetos <b>↗</b></a><a href="#contato" data-route="contato"><span>04</span>Contato <b>↗</b></a></nav><div class="menu-end">CRIATIVIDADE + ESTRATÉGIA + CÓDIGO <span class="lime">✳</span> <a class="menu-github-link" href="https://github.com/Kabula21" target="_blank" rel="noopener noreferrer" aria-label="Ver perfil GitHub de Anderson Fernandes">GITHUB ↗</a></div></div>
     </div>
-    <div class="project-modal" data-project-modal role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden><div class="project-modal-inner"><button type="button" class="close-modal" data-close-modal aria-label="Fechar detalhes">✕</button><div data-modal-content></div></div></div>
+    <div class="project-modal" data-project-modal role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden><div class="project-modal-inner"><div class="case-modal-top"><span>ANDERSON FERNANDES <span class="lime">/</span> ESTUDOS</span><button type="button" class="close-modal" data-close-modal aria-label="Fechar detalhes do projeto">FECHAR <span aria-hidden="true">✕</span></button></div><div data-modal-content></div></div></div>
     <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
   </div>
 </body>

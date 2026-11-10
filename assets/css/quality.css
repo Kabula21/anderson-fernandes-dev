@@ -1,0 +1,57 @@
+/* Nitidez / leitura — ajustes finos, sem mudar layout, seções ou comportamento.
+ * Obras originais preservadas em assets/img; os HTML <img> usam versões
+ * otimizadas 1x / 2x para reduzir interpolação em telas Retina e HiDPI.
+ */
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+/* Contraste das linhas auxiliares: cinza legível em vez de texto apagado. */
+:root {
+  --muted: #c0c4bc;
+  --muted-low: #a2aaa0;
+}
+html[data-theme='light'] {
+  --muted: #425046;
+  --muted-low: #59655a;
+}
+/* Fotografia e arte tipográfica embutida: não aplicar saturação nem zoom,
+   que rasterizavam novamente os pixels do mockup durante o hover. */
+.project-grid--editorial .project-art img,
+.project-card:hover .project-art img,
+.project-card:focus-visible .project-art img,
+.case-cover img {
+  filter: none;
+  transform: none;
+}
+.project-grid--editorial .project-art img { transition: none; }
+/* Etiquetas com menos de 10px são difíceis de ler em laptops e celulares.
+   Ajuste limitado aos rótulos informativos, sem trocar a hierarquia. */
+.project-card-number,
+.project-grid--editorial .project-card-tag,
+.projects-guidance,
+.concept-notice p,
+.about-capabilities > p,
+.service-list--refined .service-item small,
+.process-topline,
+.process-footer,
+.case-eyebrow,
+.case-facts span,
+.case-chapter-label,
+.case-cover figcaption,
+.case-section-heading .case-chapter-label,
+.case-swatch small {
+  font-size: max(10px, .65rem);
+}
+@media(max-width: 530px) {
+  .process-topline,
+  .process-footer,
+  .case-eyebrow,
+  .case-cover figcaption { font-size: 9.5px; }
+}
